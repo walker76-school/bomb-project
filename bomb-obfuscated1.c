@@ -67,7 +67,6 @@ bool isEqualStrChar(TCHAR *argv[], char* ch, int i, char str){
     return ch[i] == str;
 }
 
-// Computer Systems is my favorite class
 void levelOne(TCHAR *argv[] ){
     bool condition = calculateTrue(argv);
 
@@ -154,7 +153,6 @@ int calculateEqualChar(TCHAR *argv[], char ch, char ch_){
     return ch == ch_;
 }
 
-// AcEgIkMoQsUwY
 void levelThree(TCHAR *argv[] ){
     bool condition = calculateTrue(argv);
     int i;
@@ -190,32 +188,6 @@ char firstChar(TCHAR *argv[], char* ch, int ptr){
     return ch[ptr];
 }
 
-// ab
-// bcd
-// cdef
-// defgh
-// efghij
-// fghijkl
-// ghijklmn
-// hijklmnop
-// ijklmnopqr
-// jklmnopqrst
-// klmnopqrstuv
-// lmnopqrstuvwx
-// mnopqrstuvwxyz
-// nopqrstuvwxyzab
-// opqrstuvwxyzabcd
-// pqrstuvwxyzabcdef
-// qrstuvwxyzabcdefgh
-// rstuvwxyzabcdefghij
-// stuvwxyzabcdefghijkl
-// tuvwxyzabcdefghijklmn
-// uvwxyzabcdefghijklmnop
-// vwxyzabcdefghijklmnopqr
-// wxyzabcdefghijklmnopqrst
-// xyzabcdefghijklmnopqrstuv
-// yzabcdefghijklmnopqrstuvwx
-// zabcdefghijklmnopqrstuvwxyz
 void levelFour(TCHAR *argv[] ){
     bool condition = true;
 
