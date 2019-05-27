@@ -37,19 +37,27 @@ This version of the bomb contains the raw bomb without any obfuscation and the a
 This version of the bomb contains obfuscation by implementing nonsense function calls designed to create rabbit-holes for the students to get lost trying to solve. Most of these functions do very simple things that don't require a function call. A list of additional functions is found below:
 
 * bool calculateTrue(TCHAR *argv[] ) - Returns true
-* bint calculateStrLen(TCHAR *argv[], char* word) - Returns the strlen of word
-* bchar getSingleChar(TCHAR *argv[]) - Returns a single char from stdin
-* bbool isEqualStrChar(TCHAR *argv[], char* ch, int i, char str) - Returns if ch[i] is equal to str
-* bint calculateTwentySix(TCHAR *argv[]) - Returns 26
-* bint calculateLine(TCHAR *argv[], char* ch, int count) - Returns result of getline from stdin
-* bint calculateEqualChar(TCHAR *argv[], char ch, char ch_) - Calculates if two chars are equal
-* bchar firstChar(TCHAR *argv[], char* ch, int ptr) - Returns the char at index ptr in ch
+* int calculateStrLen(TCHAR *argv[], char* word) - Returns the strlen of word
+* char getSingleChar(TCHAR *argv[]) - Returns a single char from stdin
+* bool isEqualStrChar(TCHAR *argv[], char* ch, int i, char str) - Returns if ch[i] is equal to str
+* int calculateTwentySix(TCHAR *argv[]) - Returns 26
+* int calculateLine(TCHAR *argv[], char* ch, int count) - Returns result of getline from stdin
+* int calculateEqualChar(TCHAR *argv[], char ch, char ch_) - Calculates if two chars are equal
+* char firstChar(TCHAR *argv[], char* ch, int ptr) - Returns the char at index ptr in ch
+
+This version also changes the signature of some of the main functions:
+
+* void levelOne(TCHAR *argv[])
+* void levelTwo(TCHAR *argv[])
+* void levelThree(TCHAR *argv[])
+* void levelFour(TCHAR *argv[])
+* void explode(TCHAR *argv[])
 
 Additionally this version makes the explosion more dangerous by creating a fork bomb that spawns five new process windows. To accomplish this, a new function is added to spawn new Windows processes.
 
 * void create(TCHAR *argv[] )
 
-Lastly comments are removed and conditions are made more verbose with useless conditions i.e. while (true && true && count < 5)
+Lastly comments are removed and conditions are made more verbose with useless conditions i.e. while (true && true && count < 5).
 
 #### bomb-obfuscated2.c
 
@@ -58,9 +66,9 @@ This version of the bomb removes all helpful names by renaming all functions and
 ### Solutions
 
 * Level One - "Computer Systems is my favorite class"
-* Level Two - The user will enter a string and then enter the same string character by character
+* Level Two - The user will enter a string and then enter the same string character by character.
 * Level Three - "AcEgIkMoQsUwY"
-* Level Four - The user will enter a portion of the alphabet, the length of which is determined by the starting character. One of the following solutions will work
+* Level Four - The user will enter a portion of the alphabet, the length of which is determined by the starting character. One of the following solutions will work:
     * "ab"
     * "bcd"
     * "cdef"
@@ -97,17 +105,17 @@ This version of the bomb removes all helpful names by renaming all functions and
 
 ## Compiling the Bomb
 
-### bomb.c
+#### bomb.c
 ```
 > gcc bomb.c -o exec.exe
 ```
 
-### bomb-obfuscated1.c
+#### bomb-obfuscated1.c
 ```
 > gcc bomb-obfuscated1.c -o exec.exe
 ```
 
-### bomb-obfuscated2.c
+#### bomb-obfuscated2.c
 ```
 > gcc bomb-obfuscated2.c -o exec.exe
 ```
